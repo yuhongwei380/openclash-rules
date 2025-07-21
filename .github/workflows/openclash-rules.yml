@@ -1,0 +1,53 @@
+#Only used in openclash for openwrt
+name: openclash_rules
+on:
+  pull_request:
+  #push:
+    branches: 
+      #- master
+      - main
+    paths:
+      - 'ruls/openclash_custom_rules.list'
+jobs:
+   build:
+    runs-on: [self-hosted, nebula-fast]
+    strategy:
+      matrix:
+        address:
+               - 192.168.20.2
+               
+    steps:
+    - name: Checkout
+      uses: actions/checkout@main
+
+    - name: build proxy profile
+      run: |
+        #awk '{if (NR>1) print prev} {prev=$0} END {printf "%s", $0}' ruls/openclash_custom_rules.list > ruls/openclash_custom_rules.list
+        cat ruls/openclash_custom_rules.list
+
+    - name: copy file via ssh password
+      uses: appleboy/scp-action@master
+      with:
+        host: ${{matrix.address}}
+        username: root
+        password: ${{ secrets.PWD }}
+        port: 22
+        source: ruls/openclash_custom_rules.list
+        target: /tmp
+    
+    - name: executing remote ssh commands using password
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{matrix.address}}
+        username: root
+        password: ${{ secrets.PWD }}
+        port: 22
+        script: |
+          cp  /tmp/ruls/openclash_custom_rules.list  /etc/openclash/custom/openclash_custom_rules.list
+          chown -R  root:root /etc/openclash/custom/openclash_custom_rules.list
+
+          /etc/init.d/openclash reload
+          /etc/init.d/dnsmasq restart
+          #/etc/init.d/openclash restart
+
+
