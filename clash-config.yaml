@@ -154,7 +154,7 @@ proxy-groups:
 # 此规则部分没有做防泄露处理，因为弊严重大于利！
 rules:
   - RULE-SET,private_ip,直连
-  - RULE-SET,directinc,直连
+  - RULE-SET,direct_inc,直连
   - RULE-SET,private_domain,直连
   - DOMAIN-SUFFIX,qichiyu.com,🚀 默认代理
   - RULE-SET,proxylite,🚀 默认代理
@@ -176,7 +176,7 @@ rules:
   - RULE-SET,geolocation-!cn,🚀 默认代理
   - RULE-SET,cn_domain,直连
   - RULE-SET,cn_ip,直连
-  - RULE-SET,proxyinc,🚀 默认代理
+  - RULE-SET,proxy_inc,🚀 默认代理
   - MATCH,🐟 漏网之鱼
 
 # 规则集
@@ -188,8 +188,8 @@ rule-anchor:
 rule-providers: 
   private_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/private.mrs"}
   proxylite: { <<: *class, url: "https://raw.githubusercontent.com/qichiyuhub/rule/refs/heads/main/proxy.list"}
-  proxyinc: { <<: *class, url: "https://raw.githubusercontent.com/yuhongwei380/openclash-rules/edit/main/proxy.list"}
-  direct: { <<: *class, url: "https://raw.githubusercontent.com/yuhongwei380/openclash-rules/edit/main/direct.list"}
+  proxy_inc: { <<: *class, url: "https://raw.githubusercontent.com/yuhongwei380/openclash-rules/main/proxy.list"}
+  direct_inc: { <<: *class, url: "https://raw.githubusercontent.com/yuhongwei380/openclash-rules/main/direct.list"}
   ai: {  <<: *domain, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/category-ai-!cn.mrs" }
   youtube_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/youtube.mrs"}
   google_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/google.mrs"}
