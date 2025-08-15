@@ -124,14 +124,14 @@ dns:
 # 没有再使用锚点，是考虑很多新手修改难度，这样新手修改某个分组更容易些。
 proxy-groups:
   - {name: 🌐 全部节点, type: select, include-all: true}
-  - {name: 🚀 默认代理, type: select, proxies: [ 🌐 全部节点, 🔯 日本故转, 🔯 狮城故转, 🔯 美国故转, ♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, ♻️ 自动选择, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点 , 直连]}
-  - {name: 📹 YouTube, type: select, proxies: [ 🌐 全部节点,🚀 默认代理, 直连]}
+  - {name: 🚀 默认代理, type: select, proxies: [  🔯 日本故转, 🔯 狮城故转, 🔯 美国故转, ♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, ♻️ 自动选择, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点 , 🌐 全部节点, 直连]}
+  - {name: 📹 YouTube, type: select, proxies: [ 🌐 全部节点,🚀 默认代理, 直连]
   - {name: 🍀 Google, type: select, proxies: [ 🌐 全部节点,🚀 默认代理, 直连]}
   - {name: 🤖 ChatGPT, type: select, proxies: [🔯 日本故转, 🔯 狮城故转, 🔯 美国故转, ♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, ♻️ 自动选择, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🌐 全部节点, 直连]}
   - {name: 👨🏿‍💻 GitHub, type: select, proxies: [ 🌐 全部节点,🚀 默认代理, 直连]}
-  - {name: 🐬 OneDrive, type: select, proxies: [ 直连,🌐 全部节点]}
-  - {name: 🪟 Microsoft, type: select, proxies: [ 直连,🌐 全部节点]}
-  - {name: 🎵 TikTok, type: select, proxies: [ 直连,🌐 全部节点]}
+  - {name: 🐬 OneDrive, type: select, proxies: [ 直连,🌐 全部节点🚀 默认代理]}
+  - {name: 🪟 Microsoft, type: select, proxies: [ 直连,🌐 全部节点🚀 默认代理]}
+  - {name: 🎵 TikTok, type: select, proxies: [ 直连,🌐 全部节点🚀 默认代理]}
   - {name: 📲 Telegram, type: select, proxies: [🌐 全部节点,🚀 默认代理]}
   - {name: 🎥 NETFLIX, type: select, proxies: [ 🌐 全部节点,🚀 默认代理]}
   - {name: 💶 PayPal, type: select, proxies: [ 🌐 全部节点,🚀 默认代理]}
@@ -158,7 +158,6 @@ rules:
   - RULE-SET,direct_inc,直连
   - RULE-SET,private_domain,直连
   - DOMAIN-SUFFIX,qichiyu.com,🚀 默认代理
-  - RULE-SET,proxylite,🚀 默认代理
   - RULE-SET,ai,🤖 ChatGPT
   - RULE-SET,github_domain,👨🏿‍💻 GitHub
   - RULE-SET,youtube_domain,📹 YouTube
@@ -188,7 +187,6 @@ rule-anchor:
   class: &class {type: http, interval: 86400, behavior: classical, format: text}
 rule-providers: 
   private_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/private.mrs"}
-  proxylite: { <<: *class, url: "https://raw.githubusercontent.com/qichiyuhub/rule/refs/heads/main/proxy.list"}
   proxy_inc: { <<: *class, url: "https://raw.githubusercontent.com/yuhongwei380/openclash-rules/main/proxy.list"}
   direct_inc: { <<: *class, url: "https://raw.githubusercontent.com/yuhongwei380/openclash-rules/main/direct.list"}
   ai: {  <<: *domain, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/category-ai-!cn.mrs" }
