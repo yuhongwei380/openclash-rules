@@ -1,0 +1,30 @@
+# DNS模块
+default-nameserver:
+  - 223.5.5.5                # 阿里DNS
+  - 119.29.29.29             # 腾讯DNS
+  - 114.114.114.114          # 114DNS
+
+nameserver:
+  - https://doh.pub/dns-query       # 国内加密DNS - DNSPod
+  - https://dns.alidns.com/dns-query # 国内加密DNS - 阿里
+  - tls://1.1.1.1                   # 国外加密DNS - Cloudflare
+  - tls://8.8.8.8                   # 国外加密DNS - Google
+
+nameserver-policy:
+  'geosite:private':            # 私有域名
+    - https://doh.pub/dns-query
+    - https://dns.alidns.com/dns-query
+    - tls://223.5.5.5
+    - tls://119.29.29.29
+  
+  'geosite:cn':                 # 国内域名
+    - https://doh.pub/dns-query
+    - https://dns.alidns.com/dns-query
+    - tls://223.5.5.5
+    - tls://119.29.29.29
+  
+  'geosite:geolocation-!cn':    # 国外域名
+    - tls://1.1.1.1
+    - tls://8.8.8.8
+    - https://dns.google/dns-query
+    - tls://8.8.4.4
