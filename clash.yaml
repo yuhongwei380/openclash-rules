@@ -155,8 +155,9 @@ proxy-groups:
 # 此规则部分没有做防泄露处理，因为弊严重大于利！
 rules:
   - RULE-SET,private_ip,直连
-  - RULE-SET,direct_inc,直连
   - RULE-SET,private_domain,直连
+  - RULE-SET,direct_inc,直连
+  - RULE-SET,proxy_inc,🚀 默认代理
   - DOMAIN-SUFFIX,qichiyu.com,🚀 默认代理
   - RULE-SET,proxy_inc,🚀 默认代理
   - RULE-SET,ai,🤖 ChatGPT
@@ -177,7 +178,6 @@ rules:
   - RULE-SET,geolocation-!cn,🚀 默认代理
   - RULE-SET,cn_domain,直连
   - RULE-SET,cn_ip,直连
-  - RULE-SET,proxy_inc,🚀 默认代理
   - MATCH,🐟 漏网之鱼
 
 # 规则集
