@@ -29,3 +29,6 @@ DOMAIN-SUFFIX,test-ipv6.com
 DOMAIN-SUFFIX,golang.org
 DOMAIN-SUFFIX,golang.google.cn
 DOMAIN-SUFFIX,codecov.io
+DOMAIN-SUFFIX,cloud.nebula-graph.io
+DOMAIN-SUFFIX,cloud-cdn.nebula-cloud.io
+DOMAIN-SUFFIX,ipify.org
