@@ -1,0 +1,8 @@
+- IP-CIDR,192.168.0.0/16,DIRECT
+- DOMAIN-SUFFIX,docker.io,GLOBAL
+- DOMAIN-SUFFIX,test-ipv6.com,DIRECT
+- DOMAIN-SUFFIX,golang.org,GLOBAL
+- DOMAIN-SUFFIX,golang.google.cn,GLOBAL
+- DOMAIN-SUFFIX,codecov.io,GLOBAL
+- DOMAIN-SUFFIX,internal-docs.nebula-graph.io,DIRECT
+- DOMAIN-SUFFIX,vesoft-inc.com,DIRECT
