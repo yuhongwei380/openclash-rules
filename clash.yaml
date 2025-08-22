@@ -104,6 +104,7 @@ dns:
 proxy-groups:
   - {name: 🚀 默认代理, type: select, proxies: [ 🔯 香港故转, 🔯 日本故转, 🔯 狮城故转, 🔯 美国故转, ♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, ♻️ 自动选择, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点 , 🌐 全部节点, 直连]}
   - {name: 🌐 全部节点, type: select, include-all: true, filter: "^((?!(直连|Traffic|Expire|剩余|重置|到期|延迟)).)*$"}
+  - {name: 🏢 Company, type: select, proxies: [ 🚀 默认代理, 🌐 全部节点, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 直连]}
   - {name: 📹 YouTube, type: select, proxies: [ 🚀 默认代理, 🌐 全部节点, 直连]}
   - {name: 🍀 Google, type: select, proxies: [ 🚀 默认代理, 🌐 全部节点, 直连]}
   - {name: 🤖 ChatGPT, type: select, proxies: [ 🔯 日本故转, 🔯 狮城故转, ♻️ 日本自动, ♻️ 狮城自动, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🌐 全部节点, 直连]}
@@ -113,7 +114,6 @@ proxy-groups:
   - {name: 🎵 TikTok, type: select, proxies: [ 直连,🌐 全部节点, 🚀 默认代理]}
   - {name: 📲 Telegram, type: select, proxies: [ 🚀 默认代理, 🌐 全部节点, 直连]}
   - {name: 🎥 NETFLIX, type: select, proxies: [ 🚀 默认代理, 🌐 全部节点, 直连]}
-  - {name: 🏢 Company, type: select, proxies: [ 🚀 默认代理, 🌐 全部节点, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 直连]}
   - {name: 💶 PayPal, type: select, proxies: [ 🚀 默认代理, 🌐 全部节点, 直连]}
   - {name: 🐟 漏网之鱼, type: select, proxies: [ 🚀 默认代理, 🔯 香港故转, 🔯 日本故转, 🔯 狮城故转, 🔯 美国故转, ♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, ♻️ 自动选择, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🌐 全部节点, 直连,]}
   - {name: 🇭🇰 香港节点, type: select, include-all: true, filter: "(?i)港|hk|hongkong|hong kong"}
@@ -134,10 +134,10 @@ proxy-groups:
 # 规则匹配
 # 此规则部分没有做防泄露处理，因为弊严重大于利！
 rules:
+  - RULE-SET,proxy_inc, 🏢 Company
   - RULE-SET,private_ip,直连,no-resolve
   - RULE-SET,private_domain,直连,no-resolve
   - RULE-SET,direct_inc,直连,no-resolve
-  - RULE-SET,proxy_inc, 🏢 Company
   - DOMAIN-SUFFIX,qichiyu.com,🚀 默认代理
   - RULE-SET,proxy_inc,🚀 默认代理
   - RULE-SET,ai,🤖 ChatGPT
