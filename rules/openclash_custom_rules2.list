@@ -1,3 +1,4 @@
+rules:
 - IP-CIDR,192.168.0.0/16,DIRECT
 - DOMAIN-SUFFIX,docker.io,GLOBAL
 - DOMAIN-SUFFIX,test-ipv6.com,DIRECT
