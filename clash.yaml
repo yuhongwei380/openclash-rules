@@ -154,7 +154,6 @@ rules:
   - RULE-SET,private_domain,直连,no-resolve
   - RULE-SET,direct_inc,直连,no-resolve
   - DOMAIN-SUFFIX,qichiyu.com,🚀 默认代理
-  - RULE-SET,proxy_inc,🚀 默认代理
   - RULE-SET,ai,🤖 ChatGPT
   - RULE-SET,github_domain,👨🏿‍💻 GitHub
   - RULE-SET,youtube_domain,📹 YouTube
