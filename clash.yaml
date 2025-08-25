@@ -181,7 +181,6 @@ rule-anchor:
   domain: &domain {type: http, interval: 86400, behavior: domain, format: mrs}
   class: &class {type: http, interval: 86400, behavior: classical, format: text}
 rule-providers: 
-    reject:
   icloud:
     type: http
     behavior: domain
