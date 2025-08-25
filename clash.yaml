@@ -130,6 +130,8 @@ proxy-groups:
   - {name: 📲 Telegram, type: select, proxies: [ 🚀 默认代理, 🌐 全部节点, 直连]}
   - {name: 🎥 NETFLIX, type: select, proxies: [ 🚀 默认代理, 🌐 全部节点, 直连]}
   - {name: 💶 PayPal, type: select, proxies: [ 🚀 默认代理, 🌐 全部节点, 直连]}
+  - {name: 🍎 APPLE, type: select, proxies: [ 直连,🌐 全部节点, 🚀 默认代理]}
+  - {name: ☁️ iCloud, type: select, proxies: [ 直连,🌐 全部节点, 🚀 默认代理]}
   - {name: 🐟 漏网之鱼, type: select, proxies: [ 🚀 默认代理, 🔯 香港故转, 🔯 日本故转, 🔯 狮城故转, 🔯 美国故转, ♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, ♻️ 自动选择, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🌐 全部节点, 直连,]}
   - {name: 🇭🇰 香港节点, type: select, include-all: true, filter: "(?i)港|hk|hongkong|hong kong"}
   - {name: 🇯🇵 日本节点, type: select, include-all: true, filter: "(?i)日|jp|japan"}
@@ -158,8 +160,8 @@ rules:
   - RULE-SET,github_domain,👨🏿‍💻 GitHub
   - RULE-SET,youtube_domain,📹 YouTube
   - RULE-SET,google_domain,🍀 Google
-  - RULE-SET,apple,直连
-  - RULE-SET icloud,直连
+  - RULE-SET,apple,🍎 APPLE
+  - RULE-SET icloud,☁️ iCloud 
   - RULE-SET,onedrive_domain,🐬 OneDrive
   - RULE-SET,microsoft_domain,🪟 Microsoft
   - RULE-SET,apple_domain,直连
