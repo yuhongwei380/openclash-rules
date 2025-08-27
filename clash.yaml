@@ -97,6 +97,25 @@ dns:
   nameserver:
     - 223.5.5.5
     - 119.29.29.29
+    
+  fallback:
+    - tls://8.8.4.4
+    - tls://1.1.1.1
+
+  fallback-filter:
+    geoip: true
+    geoip-code: CN
+    ipcidr:
+      - 240.0.0.0/4
+  domain:
+      - '+.google.com'
+      - '+.facebook.com'
+      - '+.youtube.com'
+      - "+.githubusercontent.com"
+      - "+.googlevideo.com"
+      - "+.msftconnecttest.com"
+      - "+.msftncsi.com"
+      - "+.linkedin.com"
 
 
 # 出站策略，根据自己情况调整每个策略里分组排序，增删都可以，比如把美国自动放到第一个，比如删除香港故转，注意别漏掉表情逗号等。
