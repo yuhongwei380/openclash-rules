@@ -1,5 +1,26 @@
 # 代理补充列表
 
+
+#CUSTOM
+DOMAIN-SUFFIX,docker.io
+DOMAIN-SUFFIX,test-ipv6.com
+DOMAIN-SUFFIX,golang.org
+DOMAIN-SUFFIX,golang.google.cn
+DOMAIN-SUFFIX,codecov.io
+DOMAIN-SUFFIX,cloud.nebula-graph.io
+DOMAIN-SUFFIX,cloud-cdn.nebula-cloud.io
+DOMAIN-SUFFIX,ipify.org
+DOMAIN-SUFFIX,linkedin.com
+DOMAIN-SUFFIX,v2ex.com
+DOMAIN-SUFFIX,anthropic.com
+DOMAIN-SUFFIX,claude.ai
+DOMAIN-SUFFIX,framer.com
+DOMAIN-SUFFIX,framer.app
+DOMAIN-SUFFIX,framerusercontent.com
+DOMAIN-SUFFIX,neon.com
+DOMAIN-SUFFIX,graph.microsoft.com
+DOMAIN-SUFFIX,wikipedia.org
+
 # 域名后缀匹配
 
 # 域名关键字匹配
@@ -24,20 +45,3 @@ DOMAIN-SUFFIX,hk-hkg.doh.sb
 #IP-CIDR,185.222.222.222/32,no-resolve
 #IP-CIDR,208.67.222.222/32,no-resolve
 #IP-CIDR,208.67.220.220/32,no-resolve
-DOMAIN-SUFFIX,docker.io
-DOMAIN-SUFFIX,test-ipv6.com
-DOMAIN-SUFFIX,golang.org
-DOMAIN-SUFFIX,golang.google.cn
-DOMAIN-SUFFIX,codecov.io
-DOMAIN-SUFFIX,cloud.nebula-graph.io
-DOMAIN-SUFFIX,cloud-cdn.nebula-cloud.io
-DOMAIN-SUFFIX,ipify.org
-DOMAIN-SUFFIX,linkedin.com
-DOMAIN-SUFFIX,v2ex.com
-DOMAIN-SUFFIX,anthropic.com
-DOMAIN-SUFFIX,claude.ai
-DOMAIN-SUFFIX,framer.com
-DOMAIN-SUFFIX,framer.app
-DOMAIN-SUFFIX,framerusercontent.com
-DOMAIN-SUFFIX,neon.com
-DOMAIN-SUFFIX,graph.microsoft.com
