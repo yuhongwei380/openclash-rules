@@ -20,6 +20,7 @@ DOMAIN-SUFFIX,framerusercontent.com
 DOMAIN-SUFFIX,neon.com
 DOMAIN-SUFFIX,graph.microsoft.com
 DOMAIN-SUFFIX,wikipedia.org
+DOMAIN-SUFFIX,auth.wikimedia.org
 
 # 域名后缀匹配
 
