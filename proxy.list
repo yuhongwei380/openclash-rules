@@ -2,7 +2,6 @@
 
 
 #CUSTOM
-DOMAIN-SUFFIX,huggingface.co
 DOMAIN-SUFFIX,docker.io
 DOMAIN-SUFFIX,test-ipv6.com
 DOMAIN-SUFFIX,golang.org
