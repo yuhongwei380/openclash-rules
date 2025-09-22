@@ -1,5 +1,6 @@
 IP-CIDR,192.168.8.2/32
 DOMAIN-SUFFIX,internal-docs.nebula-graph.io
+DOMAIN-SUFFIX,docs.nebula-graph.io
 DOMAIN-SUFFIX,speedtest.im
 DOMAIN-SUFFIX,vesoft-inc.com
 #MSFT Teams
