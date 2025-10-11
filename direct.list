@@ -1,3 +1,4 @@
+DOMAIN-SUFFIX,jms-data-external.fulltrust.link
 IP-CIDR,192.168.8.2/32
 DOMAIN-SUFFIX,internal-docs.nebula-graph.io
 DOMAIN-SUFFIX,docs.nebula-graph.io
