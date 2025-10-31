@@ -2,6 +2,7 @@
 
 
 #CUSTOM
+DOMAIN-SUFFIX,llvm.org
 DOMAIN-SUFFIX,svb.com
 DOMAIN-SUFFIX,nessus.org
 DOMAIN-SUFFIX,docker.io
