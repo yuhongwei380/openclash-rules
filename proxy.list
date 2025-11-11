@@ -2,6 +2,7 @@
 
 
 #CUSTOM
+DOMAIN-SUFFIX,odoo.com
 DOMAIN-SUFFIX,marvel-graphs.net
 DOMAIN-SUFFIX,godbolt.org
 DOMAIN-SUFFIX,docs.google.com
