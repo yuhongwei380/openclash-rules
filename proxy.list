@@ -2,6 +2,7 @@
 
 
 #CUSTOM
+DOMAIN-SUFFIX,colab.research.google.com
 DOMAIN-SUFFIX,ipinfo.io
 DOMAIN-SUFFIX,aistudio.google.com
 DOMAIN-SUFFIX,odoo.com
