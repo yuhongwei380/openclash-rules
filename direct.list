@@ -1,7 +1,10 @@
+#IP-CIDR
 IP-CIDR,192.168.16.0/24
-DOMAIN-SUFFIX,jms-data-external.fulltrust.link
 IP-CIDR,20.38.36.143/32
 IP-CIDR,192.168.8.2/32
+
+#Domain
+DOMAIN-SUFFIX,jms-data-external.fulltrust.link
 DOMAIN-SUFFIX,internal-docs.nebula-graph.io
 DOMAIN-SUFFIX,docs.nebula-graph.io
 DOMAIN-SUFFIX,speedtest.im
