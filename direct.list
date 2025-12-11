@@ -11,6 +11,7 @@ SRC-IP-CIDR,20.38.36.143/32
 SRC-IP-CIDR,192.168.8.2/32
 
 #Domain
+DOMAIN-SUFFIX,jms-external.data.fulltrust.link
 DOMAIN-SUFFIX,jms-data-external.fulltrust.link
 DOMAIN-SUFFIX,internal-docs.nebula-graph.io
 DOMAIN-SUFFIX,docs.nebula-graph.io
