@@ -2,6 +2,7 @@
 
 
 #CUSTOM
+DOMAIN-SUFFIX,algolia.net
 DOMAIN-SUFFIX,anthem.com
 DOMAIN-SUFFIX,colab.research.google.com
 DOMAIN-SUFFIX,ipinfo.io
