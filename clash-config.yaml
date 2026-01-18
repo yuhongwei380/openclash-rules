@@ -16,6 +16,7 @@ proxy-providers:
 # 节点信息
 proxies:
   - {name: 直连, type: direct}
+  #- {"type":"vless","name":"自建节点","server":"IP","port":port,"uuid":"uuid","tls":true,"flow":"xtls-rprx-vision","client-fingerprint":"chrome","skip-cert-verify":false,"reality-opts":{"public-key":"public-key","short-id":"short-id","_spider-x":"/"},"network":"tcp","encryption":"none","servername":"tesla.com"}
 
 # 全局配置 
 port: 7890
