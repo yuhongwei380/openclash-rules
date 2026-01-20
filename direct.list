@@ -10,6 +10,10 @@ SRC-IP-CIDR,192.168.11.0/24
 SRC-IP-CIDR,20.38.36.143/32
 SRC-IP-CIDR,192.168.8.2/32
 
+
+#custom-domain
+DOMAIN-SUFFIX,packycode.com
+
 #Domain
 DOMAIN-SUFFIX,jms-external.data.fulltrust.link
 DOMAIN-SUFFIX,jms-data-external.fulltrust.link
