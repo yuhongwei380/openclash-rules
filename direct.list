@@ -15,9 +15,12 @@ SRC-IP-CIDR,192.168.8.2/32
 #custom-domain
 DOMAIN-SUFFIX,packycode.com
 
-#Domain
+#kehu-domain
+DOMAIN-SUFFIX,nayapay.com
 DOMAIN-SUFFIX,jms-external.data.fulltrust.link
 DOMAIN-SUFFIX,jms-data-external.fulltrust.link
+
+#internal-domain
 DOMAIN-SUFFIX,internal-docs.nebula-graph.io
 DOMAIN-SUFFIX,docs.nebula-graph.io
 DOMAIN-SUFFIX,speedtest.im
