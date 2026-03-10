@@ -26,6 +26,7 @@ proxy-providers:
 # 节点信息
 proxies:
   - {name: 直连, type: direct}
+  #- {"type":"vless","name":"自建节点","server":"IP","port":port,"uuid":"uuid","tls":true,"flow":"xtls-rprx-vision","client-fingerprint":"chrome","skip-cert-verify":false,"reality-opts":{"public-key":"public-key","short-id":"short-id","_spider-x":"/"},"network":"tcp","encryption":"none","servername":"tesla.com"}
 
 # 全局配置 
 port: 7890
@@ -135,13 +136,13 @@ dns:
 # 没有再使用锚点，是考虑很多新手修改难度，这样新手修改某个分组更容易些。
 proxy-groups:
 
-  - {name: 🚀 默认代理, type: select, proxies: [ 🔯 线路故转, ♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, ♻️ 自动选择, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点 , 🌐 全部节点, 直连]}
+  - {name: 🚀 默认代理, type: select, proxies: [ 🔯 香港故转, ♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, ♻️ 自动选择, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点 , 🌐 全部节点, 直连]}
   - {name: 🌐 全部节点, type: select, include-all: true, filter: "^((?!(直连|Traffic|Expire|剩余|重置|到期|延迟|过期)).)*$"}
-  - {name: 🏢 Company, type: select, proxies: [ 🔯 JP&SG故转, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, ♻️ 自动选择,🚀 默认代理, 🌐 全部节点, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 直连]}
-  - {name: 📹 YouTube, type: select, proxies: [ ♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, ♻️ 自动选择,🚀 默认代理, 🌐 全部节点, 直连]}
-  - {name: 🍀 Google, type: select, proxies: [ ♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, ♻️ 自动选择,🚀 默认代理, 🌐 全部节点, 直连]}
-  - {name: 🤖 ChatGPT, type: select, proxies: [ ♻️ 日本自动, ♻️ 狮城自动, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🌐 全部节点, 直连]}
-  - {name: 👨🏿‍💻 GitHub, type: select, proxies: [ ♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, ♻️ 自动选择,🚀 默认代理, 🌐 全部节点, 直连]}
+  - {name: 🏢 Company, type: select, proxies: [ 🔯 日新故转, 🔯 美国故转, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, ♻️ 自动选择,🚀 默认代理, 🌐 全部节点, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 直连]}
+  - {name: 📹 YouTube, type: select, proxies: [ 🔯 日新故转, ♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, ♻️ 自动选择,🚀 默认代理, 🌐 全部节点, 直连]}
+  - {name: 🍀 Google, type: select, proxies: [ 🔯 美国故转, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, ♻️ 自动选择,🚀 默认代理, 🌐 全部节点, 直连]}
+  - {name: 🤖 ChatGPT, type: select, proxies: [ 🔯 美国故转,♻️ 日本自动, ♻️ 狮城自动, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🌐 全部节点, 直连]}
+  - {name: 👨🏿‍💻 GitHub, type: select, proxies: [ 🔯 香港故转, ♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, ♻️ 自动选择,🚀 默认代理, 🌐 全部节点, 直连]}
   - {name: 🐬 OneDrive, type: select, proxies: [ 直连,🌐 全部节点, 🚀 默认代理]}
   - {name: 🪟 Microsoft, type: select, proxies: [ 直连,🌐 全部节点, 🚀 默认代理]}
   - {name: 🎵 TikTok, type: select, proxies: [ 直连,🌐 全部节点, 🚀 默认代理]}
@@ -149,12 +150,8 @@ proxy-groups:
   - {name: 🎥 NETFLIX, type: select, proxies: [ ♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, ♻️ 自动选择,🚀 默认代理, 🌐 全部节点, 直连]}
   - {name: 💶 PayPal, type: select, proxies: [ ♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, ♻️ 自动选择,🚀 默认代理, 🌐 全部节点, 直连]}
   - {name: 🐟 漏网之鱼, type: select, proxies: [ 🚀 默认代理, ♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, ♻️ 自动选择, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🌐 全部节点, 直连,]}
-  - {name: 🇭🇰 香港节点, type: select, include-all: true, filter: "(?i)港|hk|hongkong|hong kong"}
-  - {name: 🇯🇵 日本节点, type: select, include-all: true, filter: "(?i)日|jp|japan"}
-  - {name: 🇸🇬 狮城节点, type: select, include-all: true, filter: "(?i)新加坡|坡|狮城|SG|Singapore"}
-  - {name: 🇺🇲 美国节点, type: select, include-all: true, filter: "(?i)美|us|unitedstates|united states"}
-  - {name: 🔯 线路故转, type: fallback, tolerance: 50, interval: 300, proxies: [ 🇭🇰 香港节点, ♻️ 香港自动,  ♻️ 日本自动, 🇯🇵 日本节点, ♻️ 狮城自动, 🇸🇬 狮城节点, 🇺🇲 美国节点 , 🌐 全部节点, 直连]}
-  - {name: 🔯 JP&SG故转, type: fallback, tolerance: 50, interval: 300, proxies: [ ♻️ 日本自动, ♻️ 狮城自动,  🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点 , 🌐 全部节点, 直连]}
+  - {name: 🔯 故障转移, type: fallback, url: http://www.gstatic.com/generate_204, interval: 300, proxies: [ 🇭🇰 香港节点, ♻️ 香港自动,  ♻️ 日本自动, 🇯🇵 日本节点, ♻️ 狮城自动, 🇸🇬 狮城节点, 🇺🇲 美国节点 , 🌐 全部节点, 直连]}
+  - {name: 🔯 日新故转, type: fallback, include-all: true, tolerance: 20, interval: 300, filter: "(?=.*(日|JP|(?i)Japan|新加坡|坡|狮城|SG|Singapore))^((?!(港|台|韩|新|美)).)*$" }
   - {name: 🔯 香港故转, type: fallback, include-all: true, tolerance: 20, interval: 300, filter: "(?=.*(港|HK|(?i)Hong))^((?!(台|日|韩|新|深|美)).)*$"}
   - {name: 🔯 日本故转, type: fallback, include-all: true, tolerance: 20, interval: 300, filter: "(?=.*(日|JP|(?i)Japan))^((?!(港|台|韩|新|美)).)*$" }
   - {name: 🔯 狮城故转, type: fallback, include-all: true, tolerance: 20, interval: 300, filter: "(?=.*(新加坡|坡|狮城|SG|Singapore))^((?!(台|日|韩|深|美)).)*$"}
@@ -164,6 +161,10 @@ proxy-groups:
   - {name: ♻️ 狮城自动, type: url-test, include-all: true, tolerance: 50, interval: 300, filter: "(?=.*(新加坡|坡|狮城|SG|Singapore))^((?!(港|台|韩|日|美)).)*$" }
   - {name: ♻️ 美国自动, type: url-test, include-all: true, tolerance: 50, interval: 300, filter: "(?=.*(美|US|(?i)States|America))^((?!(港|台|日|韩|新)).)*$"}
   - {name: ♻️ 自动选择, type: url-test, include-all: true, tolerance: 50, interval: 300, filter: "^((?!(直连)).)*$"}
+  - {name: 🇭🇰 香港节点, type: select, include-all: true, filter: "(?i)港|hk|hongkong|hong kong"}
+  - {name: 🇯🇵 日本节点, type: select, include-all: true, filter: "(?i)日|jp|japan"}
+  - {name: 🇸🇬 狮城节点, type: select, include-all: true, filter: "(?i)新加坡|坡|狮城|SG|Singapore"}
+  - {name: 🇺🇲 美国节点, type: select, include-all: true, filter: "(?i)美|us|unitedstates|united states"}
 
 
 # 规则匹配
