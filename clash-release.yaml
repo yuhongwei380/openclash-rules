@@ -14,7 +14,7 @@ proxy-providers:
     proxy: 直连
 
   bywave2:
-    url: "aaaa"
+    url: "bbbb"
     type: http
     interval: 21600
     health-check:
@@ -23,16 +23,9 @@ proxy-providers:
       interval: 300
     🚀 默认代理
 
-# 节点信息
-proxies:
-  - {name: 直连, type: direct}
-  #- {"type":"vless","name":"自建节点","server":"IP","port":port,"uuid":"uuid","tls":true,"flow":"xtls-rprx-vision","client-fingerprint":"chrome","skip-cert-verify":false,"reality-opts":{"public-key":"public-key","short-id":"short-id","_spider-x":"/"},"network":"tcp","encryption":"none","servername":"tesla.com"}
-
 # 全局配置 
 port: 7890
 socks-port: 7891
-authentication:
-  - "openclash:openclash"
 redir-port: 7892
 mixed-port: 7893
 tproxy-port: 7894
@@ -110,17 +103,16 @@ dns:
   nameserver:
     - 223.5.5.5
     - 119.29.29.29
-    
+ 
   fallback:
     - tls://8.8.4.4
     - tls://1.1.1.1
-
   fallback-filter:
     geoip: true
     geoip-code: CN
     ipcidr:
       - 240.0.0.0/4
-  domain:
+    domain:
       - '+.google.com'
       - '+.facebook.com'
       - '+.youtube.com'
