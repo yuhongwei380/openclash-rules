@@ -2,6 +2,8 @@
 
 
 #CUSTOM
+DOMAIN-SUFFIX,aws.amazon.com
+DOMAIN-SUFFIX,terraform.io
 DOMAIN-SUFFIX,anthem.com
 DOMAIN-SUFFIX,employer.anthem.com
 DOMAIN-SUFFIX,kitware.com
