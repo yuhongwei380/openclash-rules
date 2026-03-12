@@ -2,7 +2,7 @@
 
 
 #CUSTOM
-#DOMAIN-SUFFIX,openai.azure.com
+DOMAIN-SUFFIX,authem.com
 DOMAIN-SUFFIX,kitware.com
 DOMAIN-SUFFIX,genspark.ai
 DOMAIN-SUFFIX,kaiserpermanente.org
