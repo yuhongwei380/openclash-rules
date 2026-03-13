@@ -21,7 +21,7 @@ proxy-providers:
       enable: true
       url: https://www.gstatic.com/generate_204
       interval: 300
-    🚀 默认代理
+    proxy: 🚀 默认代理
 
 
 # 节点信息
