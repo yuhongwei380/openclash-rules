@@ -2,6 +2,7 @@
 
 
 #CUSTOM
+DOMAIN-SUFFIX,iij.ad.jp
 DOMAIN-SUFFIX,aws.amazon.com
 DOMAIN-SUFFIX,terraform.io
 DOMAIN-SUFFIX,anthem.com
