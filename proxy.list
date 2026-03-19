@@ -2,6 +2,7 @@
 
 
 #CUSTOM
+DOMAIN-SUFFIX,dl.min.io
 DOMAIN-SUFFIX,cmake.org
 DOMAIN-SUFFIX,cloud-docs.nebula-graph.io
 DOMAIN-SUFFIX,iij.ad.jp
