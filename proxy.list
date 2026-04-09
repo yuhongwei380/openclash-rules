@@ -2,7 +2,8 @@
 
 
 #CUSTOM
-DOMAIN,SUFFIX,gusto.com
+DOMAIN-SUFFIX,rustup.rs
+DOMAIN-SUFFIX,gusto.com
 DOMAIN-SUFFIX,dl.min.io
 DOMAIN-SUFFIX,cmake.org
 DOMAIN-SUFFIX,cloud-docs.nebula-graph.io
