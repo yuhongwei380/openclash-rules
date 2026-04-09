@@ -2,6 +2,7 @@
 
 
 #CUSTOM
+DOMAIN-SUFFIX,cloudfront.net #atlassian.net的cdn
 DOMAIN-SUFFIX,rustup.rs
 DOMAIN-SUFFIX,gusto.com
 DOMAIN-SUFFIX,dl.min.io
