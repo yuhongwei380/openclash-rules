@@ -34,7 +34,7 @@ port: 7890
 socks-port: 7891
 redir-port: 7892
 mixed-port: 7893
-tproxy-port: 7894
+tproxy-port: 7895
 allow-lan: true
 bind-address: "*"
 ipv6: true
@@ -52,10 +52,10 @@ profile:
 
 
 external-controller: 0.0.0.0:9090
-external-ui: ui
+external-ui: "/usr/share/openclash/ui"
 external-ui-name: zashboard
 external-ui-url: https://github.com/Zephyruso/zashboard/archive/refs/heads/gh-pages.zip
-secret: "123456"
+secret: 123456
 
 # 嗅探
 sniffer:
@@ -91,14 +91,14 @@ dns:
   ipv6: false
   respect-rules: true
   enhanced-mode: redir-host  #fake-ip
-  fake-ip-range: 28.0.0.1/8
-  fake-ip-filter-mode: blacklist
-  fake-ip-filter:
-    - "rule-set:private_domain,cn_domain"
-    - "+.msftconnecttest.com"
-    - "+.msftncsi.com"
-    - "time.*.com"
-    - "+.market.xiaomi.com"
+  #fake-ip-range: 198.18.0.1/16
+  #fake-ip-filter-mode: blacklist
+  #fake-ip-filter:
+    #- "rule-set:private_domain,cn_domain"
+    #- "+.msftconnecttest.com"
+    #- "+.msftncsi.com"
+    #- "time.*.com"
+    #- "+.market.xiaomi.com"
   default-nameserver:
     - 223.5.5.5
   proxy-server-nameserver:
