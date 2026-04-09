@@ -37,7 +37,7 @@ mixed-port: 7893
 tproxy-port: 7895
 allow-lan: true
 bind-address: "*"
-ipv6: true
+ipv6: false
 unified-delay: true
 tcp-concurrent: true
 # interface-name: enp6s18
@@ -55,7 +55,7 @@ external-controller: 0.0.0.0:9090
 external-ui: "/usr/share/openclash/ui"
 external-ui-name: zashboard
 external-ui-url: https://github.com/Zephyruso/zashboard/archive/refs/heads/gh-pages.zip
-secret: 123456
+secret: OpenClash
 
 # 嗅探
 sniffer:
