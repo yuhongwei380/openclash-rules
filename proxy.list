@@ -2,8 +2,6 @@
 
 
 #CUSTOM
-DOMAIN-SUFFIX,demo-sa-service.openai.azure.com
-DOMAIN-SUFFIX,openai.azure.com
 DOMAIN-SUFFIX,us-east-2.amazonaws.com
 DOMAIN-SUFFIX,cloudfront.net #atlassian.net的cdn
 DOMAIN-SUFFIX,rustup.rs
