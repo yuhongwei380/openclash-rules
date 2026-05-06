@@ -2,6 +2,7 @@
 
 
 #CUSTOM
+DOMAIN-SUFFIX,gamma.app
 DOMAIN-SUFFIX,us-east-2.amazonaws.com
 DOMAIN-SUFFIX,cloudfront.net #atlassian.net的cdn
 DOMAIN-SUFFIX,rustup.rs
