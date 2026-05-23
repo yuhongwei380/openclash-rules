@@ -52,9 +52,9 @@ profile:
 
 
 external-controller: 0.0.0.0:9090
-external-ui: "/usr/share/openclash/ui"
-external-ui-name: zashboard
-external-ui-url: https://github.com/Zephyruso/zashboard/archive/refs/heads/gh-pages.zip
+#external-ui: "/usr/share/openclash/ui"
+#external-ui-name: zashboard
+#external-ui-url: https://github.com/Zephyruso/zashboard/archive/refs/heads/gh-pages.zip
 secret: OpenClash
 
 # 嗅探
