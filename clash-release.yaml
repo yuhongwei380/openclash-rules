@@ -140,12 +140,12 @@ proxy-groups:
   - {name: 🌐 全部节点, type: select, include-all: true, filter: "^((?!(直连|Traffic|Expire|剩余|重置|到期|延迟|过期)).)*$"}
 
   # 场景化路由策略
-  - {name: 🏢 Company, type: select, proxies: [ 🔯 故障转移, 🔯 日新故转, 🔯 美国故转, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, 🚀 默认代理, 🌐 全部节点, 直连]}
+  - {name: 🏢 Company, type: select, proxies: [ [ ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, 🔯 故障转移, 🔯 日新故转, 🔯 美国故转, 🚀 默认代理, 🌐 全部节点, 直连]}
   - {name: 📹 YouTube, type: select, proxies: [ ♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, 🚀 默认代理, 🌐 全部节点, 直连]}
   - {name: 🍀 Google, type: select, proxies: [ ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, 🚀 默认代理, 🌐 全部节点, 直连]}
   - {name: 🤖 ChatGPT, type: select, proxies: [ 🔯 美国故转, ♻️ 日本自动, ♻️ 狮城自动, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🌐 全部节点]}
   - {name: 🗽 US-Proxy, type: select, proxies: [ 🔯 美国故转, ♻️ 日本自动, ♻️ 狮城自动, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🌐 全部节点]}
-  - {name: 👨🏿‍💻 GitHub, type: select, proxies: [ 🔯 香港故转, 🔯 日新故转, 🔯 美国故转, 🚀 默认代理, 🌐 全部节点, 直连]}
+  - {name: 👨🏿‍💻 GitHub, type: select, proxies: [ [ ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, 🔯 香港故转, 🔯 日新故转, 🔯 美国故转, 🚀 默认代理, 🌐 全部节点, 直连]}
   - {name: 🐬 OneDrive, type: select, proxies: [ 直连, 🌐 全部节点, 🚀 默认代理]}
   - {name: 🪟 Microsoft, type: select, proxies: [ 直连, 🌐 全部节点, 🚀 默认代理]}
   - {name: 🎵 TikTok, type: select, proxies: [ ♻️ 美国自动, ♻️ 狮城自动, 🌐 全部节点]}
@@ -155,17 +155,12 @@ proxy-groups:
   - {name: 🐟 漏网之鱼, type: select, proxies: [ 直连, 🚀 默认代理, 🌐 全部节点]}
 
   # Fallback 故障转移组 (注重稳定，去除了tolerance，补全了url，修复了正则冲突)
-  - {name: 🔯 故障转移, type: fallback, url: https://cp.cloudflare.com/generate_204, interval: 300, proxies: [ ♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🌐 全部节点]}
-  - {name: 🔯 日新故转, type: fallback, url: https://cp.cloudflare.com/generate_204, interval: 300, include-all: true, filter: "(?=.*(日|JP|(?i)Japan|新加坡|坡|狮城|SG|Singapore))^((?!(港|台|韩|美)).)*$" }
-  - {name: 🔯 香港故转, type: fallback, url: https://cp.cloudflare.com/generate_204, interval: 300, include-all: true, filter: "(?=.*(港|HK|(?i)Hong))^((?!(台|日|韩|新|深|美)).)*$"}
-  - {name: 🔯 美国故转, type: fallback, url: https://cp.cloudflare.com/generate_204, interval: 300, include-all: true, filter: "(?=.*(美|US|(?i)States|America))^((?!(港|台|韩|新|日)).)*$" }
+  - {name: 🔯 故障转移, type: fallback, url: https://cp.cloudflare.com/generate_204, interval: 300, proxies: [♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, 🇭🇰 香港节点, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🌐 全部节点]}
 
-  # Url-Test 自动测速组 (注重速度，保留tolerance，修复了正则冲突)
-  - {name: ♻️ 香港自动, type: url-test, url: https://cp.cloudflare.com/generate_204, interval: 300, tolerance: 50, include-all: true, filter: "(?=.*(港|HK|(?i)Hong))^((?!(台|日|韩|新|深|美)).)*$"}
-  - {name: ♻️ 日本自动, type: url-test, url: https://cp.cloudflare.com/generate_204, interval: 300, tolerance: 50, include-all: true, filter: "(?=.*(日|JP|(?i)Japan))^((?!(港|台|韩|新|美)).)*$" }
-  - {name: ♻️ 狮城自动, type: url-test, url: https://cp.cloudflare.com/generate_204, interval: 300, tolerance: 50, include-all: true, filter: "(?=.*(新加坡|坡|狮城|SG|Singapore))^((?!(港|台|韩|日|美)).)*$" }
-  - {name: ♻️ 美国自动, type: url-test, url: https://cp.cloudflare.com/generate_204, interval: 300, tolerance: 50, include-all: true, filter: "(?=.*(美|US|(?i)States|America))^((?!(港|台|日|韩|新)).)*$"}
-  - {name: ♻️ 自动选择, type: url-test, url: https://cp.cloudflare.com/generate_204, interval: 300, tolerance: 50, include-all: true, filter: "^((?!(直连)).)*$"}
+  # 地区故障转移，改用嵌套结构
+  - {name: 🔯 日新故转, type: fallback, url: https://cp.cloudflare.com/generate_204, interval: 300, proxies: [♻️ 日本自动, ♻️ 狮城自动, 🇯🇵 日本节点, 🇸🇬 狮城节点]}
+  - {name: 🔯 香港故转, type: fallback, url: https://cp.cloudflare.com/generate_204, interval: 300, proxies: [♻️ 香港自动, 🇭🇰 香港节点]}
+  - {name: 🔯 美国故转, type: fallback, url: https://cp.cloudflare.com/generate_204, interval: 300, proxies: [♻️ 美国自动, 🇺🇲 美国节点]}
 
   # 纯手动选择组 (作为底层支撑节点)
   - {name: 🇭🇰 香港节点, type: select, include-all: true, filter: "(?i)港|hk|hongkong|hong kong"}
