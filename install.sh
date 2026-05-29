@@ -1189,7 +1189,7 @@ install_x-ui() {
     echo -e "${green}x-ui ${tag_version}${plain} 安装完成，现在正在运行..."
     echo -e ""
     echo -e "┌───────────────────────────────────────────────────────┐
-│  ${blue}x-ui 控制菜单用法 (子命令):${plain}                          │
+│  ${blue}x-ui 控制菜单用法 (子命令):${plain}                           │
 │                                                       │
 │  ${blue}x-ui${plain}              - 管理脚本菜单                     │
 │  ${blue}x-ui start${plain}        - 启动 x-ui 面板                   │
@@ -1210,4 +1210,16 @@ install_x-ui() {
 
 echo -e "${green}运行中...${plain}"
 install_base
-install_x-ui $1
+
+# 提示用户输入版本号
+read -rp "请输入要安装的 3x-ui 版本号 (例如 v2.3.8，直接回车则默认安装最新版): " user_version
+# 去除输入中可能包含的空格
+user_version="${user_version// /}"
+
+if [[ -z "$user_version" ]]; then
+    echo -e "${yellow}未检测到输入，准备安装最新版本...${plain}"
+    install_x-ui
+else
+    echo -e "${green}准备安装指定版本: ${user_version}${plain}"
+    install_x-ui "$user_version"
+fi
