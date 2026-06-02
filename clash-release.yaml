@@ -146,7 +146,7 @@ proxy-groups:
   - {name: 🏢 Company, type: select, proxies: [ ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, 🔯 故障转移, 🔯 日新故转, 🔯 美国故转, 🚀 默认代理, 🌐 全部节点, 直连]}
   - {name: 📹 YouTube, type: select, proxies: [ ♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, 🚀 默认代理, 🌐 全部节点, 直连]}
   - {name: 🍀 Google, type: select, proxies: [ ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, 🚀 默认代理, 🌐 全部节点, 直连]}
-  - {name: 🤖 ChatGPT, type: select, proxies: [ 🔯 美国故转, ♻️ 日本自动, ♻️ 狮城自动, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🌐 全部节点]}
+  - {name: 🤖 ChatGPT, type: select, proxies: [ 🔯 美国故转, 🇺🇲 美国节点, 🌐 全部节点]}
   - {name: 🗽 US-Proxy, type: select, proxies: [ 🔯 美国故转, ♻️ 日本自动, ♻️ 狮城自动, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🌐 全部节点]}
   - {name: 👨🏿‍💻 GitHub, type: select, proxies: [ ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, 🔯 香港故转, 🔯 日新故转, 🔯 美国故转, 🚀 默认代理, 🌐 全部节点, 直连]}
   - {name: 🐬 OneDrive, type: select, proxies: [ 直连, 🌐 全部节点, 🚀 默认代理]}
