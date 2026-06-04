@@ -144,11 +144,13 @@ proxy-groups:
 
   # 场景化路由策略
   - {name: 🏢 Company, type: select, proxies: [ ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, 🔯 故障转移, 🔯 日新故转, 🔯 美国故转, 🚀 默认代理, 🌐 全部节点, 直连]}
-  - {name: 📹 YouTube, type: select, proxies: [ ♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, 🚀 默认代理, 🌐 全部节点, 直连]}
   - {name: 🍀 Google, type: select, proxies: [ ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, 🚀 默认代理, 🌐 全部节点, 直连]}
-  - {name: 🤖 ChatGPT, type: select, proxies: [ 🔯 美国故转, 🇺🇲 美国节点, 🌐 全部节点]}
+  - {name: ✨ Openai, type: select, proxies: [ ♻️ 美国自动, 🇺🇲 美国节点, 🌐 全部节点]}
+  - {name: ✨ Copilot, type: select, proxies: [ ♻️ 美国自动, 🇺🇲 美国节点,♻️ 日本自动, ♻️ 狮城自动, 🌐 全部节点]}
+  - {name: 🤖 AI, type: select, proxies: [ 🔯 美国故转, 🇺🇲 美国节点, 🌐 全部节点]}
   - {name: 🗽 US-Proxy, type: select, proxies: [ 🔯 美国故转, ♻️ 日本自动, ♻️ 狮城自动, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🇺🇲 美国节点, 🌐 全部节点]}
   - {name: 👨🏿‍💻 GitHub, type: select, proxies: [ ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, 🔯 香港故转, 🔯 日新故转, 🔯 美国故转, 🚀 默认代理, 🌐 全部节点, 直连]}
+  - {name: 📹 YouTube, type: select, proxies: [ ♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, 🚀 默认代理, 🌐 全部节点, 直连]}
   - {name: 🐬 OneDrive, type: select, proxies: [ 直连, 🌐 全部节点, 🚀 默认代理]}
   - {name: 🪟 Microsoft, type: select, proxies: [ 直连, 🌐 全部节点, 🚀 默认代理]}
   - {name: 🎵 TikTok, type: select, proxies: [ ♻️ 美国自动, ♻️ 狮城自动, 🌐 全部节点]}
@@ -183,10 +185,12 @@ rules:
   - RULE-SET,direct_inc,DIRECT
   - RULE-SET,us_proxy_inc,🗽 US-Proxy
   - RULE-SET,proxy_inc, 🏢 Company
+  - RULE-SET,copilot, ✨ Copilot
+  - RULE-SET,openai, ✨ Openai
   - RULE-SET,private_ip,直连
   - RULE-SET,private_domain,直连
   - DOMAIN-SUFFIX,qichiyu.com,🚀 默认代理
-  - RULE-SET,ai,🤖 ChatGPT
+  - RULE-SET,ai,🤖 AI
   - RULE-SET,github_domain,👨🏿‍💻 GitHub
   - RULE-SET,youtube_domain,📹 YouTube
   - RULE-SET,google_domain,🍀 Google
@@ -217,6 +221,8 @@ rule-providers:
   us_proxy_inc: { <<: *class, url: "https://raw.githubusercontent.com/yuhongwei380/openclash-rules/main/us_proxy.list"}
   proxy_inc: { <<: *class, url: "https://raw.githubusercontent.com/yuhongwei380/openclash-rules/main/proxy.list"}
   direct_inc: { <<: *class, url: "https://raw.githubusercontent.com/yuhongwei380/openclash-rules/main/direct.list"}
+  copilot: { <<: *class, url: "https://raw.githubusercontent.com/VPSDance/ai-proxy-rules/main/rules/clash/copilot.yaml"}
+  openai: { <<: *class, url: "https://raw.githubusercontent.com/VPSDance/ai-proxy-rules/main/rules/clash/openai.yaml"}
   ai: {  <<: *domain, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/category-ai-!cn.mrs" }
   youtube_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/youtube.mrs"}
   google_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/google.mrs"}
