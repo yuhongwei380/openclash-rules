@@ -2,6 +2,8 @@
 
 
 #CUSTOM
+DOMAIN-SUFFIX,ubuntu.com
+DOMAIN-SUFFIX,networkradius.com
 DOMAIN-SUFFIX,docker.com
 DOMAIN-SUFFIX,gamma.app
 DOMAIN-SUFFIX,us-east-2.amazonaws.com
