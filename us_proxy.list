@@ -4,6 +4,7 @@
 #CUSTOM
 DOMAIN-SUFFIX,talordata.com
 DOMAIN-SUFFIX,invoice.stripe.com
+DOMAIN-SUFFIX,js.stripe.com
 DOMAIN-SUFFIX,stripe.com
 DOMAIN-SUFFIX,gap.barclaysus.com
 DOMAIN-SUFFIX,gap.com
