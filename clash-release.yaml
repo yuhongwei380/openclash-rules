@@ -43,7 +43,6 @@ tcp-concurrent: true
 # interface-name: enp6s18
 log-level: warning
 find-process-mode: 'off'
-global-client-fingerprint: chrome
 keep-alive-idle: 600
 keep-alive-interval: 15
 profile:
@@ -139,17 +138,17 @@ dns:
 # 没有再使用锚点，是考虑很多新手修改难度，这样新手修改某个分组更容易些。
 proxy-groups:
   # 核心策略组
-  - {name: 🚀 默认代理, type: select, proxies: [ 🔯 香港故转, 🔯 日本故转, 🔯 新加坡故转, 🔯 美国故转, ♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, 🌐 全部节点, 直连]}
+  - {name: 🚀 默认代理, type: select, client-fingerprint: chrome, proxies: [ 🔯 香港故转, 🔯 日本故转, 🔯 新加坡故转, 🔯 美国故转, ♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, 🌐 全部节点, 直连]}
   - {name: 🌐 全部节点, type: select, include-all: true, filter: "^((?!(直连|Traffic|Expire|剩余|重置|到期|延迟|过期)).)*$"}
 
   # 场景化路由策略
-  - {name: 🏢 Company, type: select, proxies: [ ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, 🔯 日本故转, 🔯 美国故转, 🚀 默认代理, 🌐 全部节点, 直连]}
-  - {name: 🍀 Google, type: select, proxies: [ ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, 🚀 默认代理, 🌐 全部节点, 直连]}
-  - {name: ✨ Openai, type: select, proxies: [ ♻️ 美国自动, 🇺🇲 美国节点, 🌐 全部节点]}
-  - {name: ✨ Copilot, type: select, proxies: [ ♻️ 美国自动, 🇺🇲 美国节点,♻️ 日本自动, ♻️ 狮城自动, 🌐 全部节点]}
-  - {name: 🤖 AI, type: select, proxies: [ 🔯 美国故转, 🇺🇲 美国节点, 🌐 全部节点]}
-  - {name: 🗽 US-Proxy, type: select, proxies: [ 🔯 美国故转, ♻️ 美国自动, 🇺🇲 美国节点, ♻️ 日本自动, ♻️ 狮城自动, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🌐 全部节点]}
-  - {name: 👨🏿‍💻 GitHub, type: select, proxies: [ ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, 🔯 香港故转, 🔯 日本故转,🔯 新加坡故转, 🔯 美国故转, 🚀 默认代理, 🌐 全部节点, 直连]}
+  - {name: 🏢 Company, type: select, client-fingerprint: chrome, proxies: [ ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, 🔯 日本故转, 🔯 美国故转, 🚀 默认代理, 🌐 全部节点, 直连]}
+  - {name: 🍀 Google, type: select, client-fingerprint: chrome, proxies: [ ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, 🚀 默认代理, 🌐 全部节点, 直连]}
+  - {name: ✨ Openai, type: select, client-fingerprint: chrome, proxies: [ ♻️ 美国自动, 🇺🇲 美国节点, 🌐 全部节点]}
+  - {name: ✨ Copilot, type: select, client-fingerprint: chrome, proxies: [ ♻️ 美国自动, 🇺🇲 美国节点, ♻️ 日本自动, ♻️ 狮城自动, 🌐 全部节点]}
+  - {name: 🤖 AI, type: select, client-fingerprint: chrome, proxies: [ 🔯 美国故转, 🇺🇲 美国节点, 🌐 全部节点]}
+  - {name: 🗽 US-Proxy, type: select, client-fingerprint: chrome, proxies: [ 🔯 美国故转, ♻️ 美国自动, 🇺🇲 美国节点, ♻️ 日本自动, ♻️ 狮城自动, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🌐 全部节点]}
+  - {name: 👨🏿‍💻 GitHub, type: select, proxies: [ ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, 🔯 香港故转, 🔯 日本故转, 🔯 新加坡故转, 🔯 美国故转, 🚀 默认代理, 🌐 全部节点, 直连]}
   - {name: 📹 YouTube, type: select, proxies: [ ♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, 🚀 默认代理, 🌐 全部节点, 直连]}
   - {name: 🐬 OneDrive, type: select, proxies: [ 直连, 🌐 全部节点, 🚀 默认代理]}
   - {name: 🪟 Microsoft, type: select, proxies: [ 直连, 🌐 全部节点, 🚀 默认代理]}
@@ -159,22 +158,23 @@ proxy-groups:
   - {name: 💶 PayPal, type: select, proxies: [ 🔯 美国故转, 🚀 默认代理, ♻️ 香港自动, ♻️ 美国自动, 🌐 全部节点]}
   - {name: 🐟 漏网之鱼, type: select, proxies: [ 直连, 🚀 默认代理, 🌐 全部节点]}
 
-
-  # 地区故障转移，改用嵌套结构
+  # 地区故障转移
   - {name: 🔯 日本故转, type: fallback, url: https://cp.cloudflare.com/generate_204, interval: 60, timeout: 3000, lazy: false, proxies: [♻️ 日本自动, 🇯🇵 日本节点]}
   - {name: 🔯 新加坡故转, type: fallback, url: https://cp.cloudflare.com/generate_204, interval: 60, timeout: 3000, lazy: false, proxies: [♻️ 狮城自动, 🇸🇬 狮城节点]}
   - {name: 🔯 香港故转, type: fallback, url: https://cp.cloudflare.com/generate_204, interval: 60, timeout: 3000, lazy: false, proxies: [♻️ 香港自动, 🇭🇰 香港节点]}
   - {name: 🔯 美国故转, type: fallback, url: https://cp.cloudflare.com/generate_204, interval: 60, timeout: 3000, lazy: false, proxies: [♻️ 美国自动, 🇺🇲 美国节点]}
-  # ==================== Url-Test 自动测速组（保持不变） ====================
-  - {name: ♻️ 香港自动, type: url-test, url: https://cp.cloudflare.com/generate_204, interval: 60, timeout: 1000, max-failed-times: 2, tolerance: 50, include-all: true, filter: "(?i)^(?=.*(港|HK|Hong))(?!(.*(台|日|韩|新|美))).*$"}
-  - {name: ♻️ 日本自动, type: url-test, url: https://cp.cloudflare.com/generate_204, interval: 60, timeout: 1000, max-failed-times: 2, tolerance: 50, include-all: true, filter: "(?=.*(日|JP|(?i)Japan))^((?!(港|台|韩|新|美)).)*$"}
-  - {name: ♻️ 狮城自动, type: url-test, url: https://cp.cloudflare.com/generate_204, interval: 60, timeout: 1000, max-failed-times: 2, tolerance: 50, include-all: true, filter: "(?=.*(新加坡|坡|狮城|SG|Singapore))^((?!(港|台|韩|日|美)).)*$"}
-  - {name: ♻️ 美国自动, type: url-test, url: https://cp.cloudflare.com/generate_204, interval: 60, timeout: 1000, max-failed-times: 2, tolerance: 50, include-all: true, filter: "(?=.*(美|US|us|(?i)States|America))^((?!(港|台|日|韩|新)).)*$"}
-  # 纯手动选择组 (作为底层支撑节点)
-  - {name: 🇭🇰 香港节点, type: select, include-all: true, filter: "(?i)港|hk|hongkong|hong kong"}
-  - {name: 🇯🇵 日本节点, type: select, include-all: true, filter: "(?i)日|jp|japan"}
-  - {name: 🇸🇬 狮城节点, type: select, include-all: true, filter: "(?i)新加坡|坡|狮城|sg|SG|Singapore"}
-  - {name: 🇺🇲 美国节点, type: select, include-all: true, filter: "(?i)美|us|unitedstates|united states"}
+  
+  # ==================== Url-Test 自动测速组（已补齐空格） ====================
+  - {name: ♻️ 香港自动, type: url-test, url: https://cp.cloudflare.com/generate_204, client-fingerprint: chrome, interval: 60, timeout: 1000, max-failed-times: 2, tolerance: 50, include-all: true, filter: "(?i)^(?=.*(港|HK|Hong))(?!(.*(台|日|韩|新|美))).*$"}
+  - {name: ♻️ 日本自动, type: url-test, url: https://cp.cloudflare.com/generate_204, client-fingerprint: chrome, interval: 60, timeout: 1000, max-failed-times: 2, tolerance: 50, include-all: true, filter: "(?=.*(日|JP|(?i)Japan))^((?!(港|台|韩|新|美)).)*$"}
+  - {name: ♻️ 狮城自动, type: url-test, url: https://cp.cloudflare.com/generate_204, client-fingerprint: chrome, interval: 60, timeout: 1000, max-failed-times: 2, tolerance: 50, include-all: true, filter: "(?=.*(新加坡|坡|狮城|SG|Singapore))^((?!(港|台|韩|日|美)).)*$"}
+  - {name: ♻️ 美国自动, type: url-test, url: https://cp.cloudflare.com/generate_204, client-fingerprint: chrome, interval: 60, timeout: 1000, max-failed-times: 2, tolerance: 50, include-all: true, filter: "(?=.*(美|US|us|(?i)States|America))^((?!(港|台|日|韩|新)).)*$"}
+  
+  # 纯手动选择组 (已调整参数位置并补齐空格)
+  - {name: 🇭🇰 香港节点, type: select, client-fingerprint: chrome, include-all: true, filter: "(?i)港|hk|hongkong|hong kong"}
+  - {name: 🇯🇵 日本节点, type: select, client-fingerprint: chrome, include-all: true, filter: "(?i)日|jp|japan"}
+  - {name: 🇸🇬 狮城节点, type: select, client-fingerprint: chrome, include-all: true, filter: "(?i)新加坡|坡|狮城|sg|SG|Singapore"}
+  - {name: 🇺🇲 美国节点, type: select, client-fingerprint: chrome, include-all: true, filter: "(?i)美|us|unitedstates|united states"}
 
 
 # 规则匹配
