@@ -213,7 +213,7 @@ rules:
 rule-anchor:
   ip: &ip {type: http, interval: 86400, behavior: ipcidr, format: mrs}
   domain: &domain {type: http, interval: 86400, behavior: domain, format: mrs}
-  class: &class {type: http, interval: 86400, behavior: classical, format: text}
+  class: &class {type: http, interval: 86400, behavior: classical, format: yaml}
 rule-providers: 
   private_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/private.mrs"}
   us_proxy_inc: { <<: *class, url: "https://raw.githubusercontent.com/yuhongwei380/openclash-rules/main/us_proxy.list"}
