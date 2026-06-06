@@ -214,13 +214,14 @@ rule-anchor:
   ip: &ip {type: http, interval: 86400, behavior: ipcidr, format: mrs}
   domain: &domain {type: http, interval: 86400, behavior: domain, format: mrs}
   class: &class {type: http, interval: 86400, behavior: classical, format: text}
+  class_yaml: &class_yaml {type: http, interval: 86400, behavior: classical, format: yaml}
 rule-providers: 
   private_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/private.mrs"}
   us_proxy_inc: { <<: *class, url: "https://raw.githubusercontent.com/yuhongwei380/openclash-rules/main/us_proxy.list"}
   proxy_inc: { <<: *class, url: "https://raw.githubusercontent.com/yuhongwei380/openclash-rules/main/proxy.list"}
   direct_inc: { <<: *class, url: "https://raw.githubusercontent.com/yuhongwei380/openclash-rules/main/direct.list"}
-  copilot: { <<: *class, url: "https://raw.githubusercontent.com/VPSDance/ai-proxy-rules/main/rules/clash/copilot.yaml"}
-  openai: { <<: *class, url: "https://raw.githubusercontent.com/VPSDance/ai-proxy-rules/main/rules/clash/openai.yaml"}
+  copilot: { <<: *class_yaml, url: "https://raw.githubusercontent.com/VPSDance/ai-proxy-rules/main/rules/clash/copilot.yaml"}
+  openai: { <<: *class_yaml, url: "https://raw.githubusercontent.com/VPSDance/ai-proxy-rules/main/rules/clash/openai.yaml"}
   ai: {  <<: *domain, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/category-ai-!cn.mrs" }
   youtube_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/youtube.mrs"}
   google_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/google.mrs"}
