@@ -50,6 +50,17 @@ profile:
   store-fake-ip: true
 
 
+# ══ 地理数据 ══
+geo-auto-update: true                                                   # 自动更新  geodata
+geo-update-interval: 24                                                 # 更新间隔  单位：小时
+geodata-mode: true                                                      # 数据分流  使用数据集进行规则与分流匹配
+geox-url:
+  geosite: https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat
+  geoip:   https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.dat
+  mmdb:    https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.metadb
+  asn:     https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/GeoLite2-ASN.mmdb
+ # ══ ══ ══
+
 external-controller: 0.0.0.0:9090
 #external-ui: "/usr/share/openclash/ui"
 #external-ui-name: zashboard
@@ -138,32 +149,32 @@ dns:
 # 没有再使用锚点，是考虑很多新手修改难度，这样新手修改某个分组更容易些。
 proxy-groups:
   # 核心策略组
-  - {name: 🚀 默认代理, type: select, client-fingerprint: chrome, proxies: [ 🔯 香港故转, 🔯 日本故转, 🔯 新加坡故转, 🔯 美国故转, ♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, 🌐 全部节点, 直连]}
+  - {name: 🚀 默认代理, type: select, client-fingerprint: chrome, proxies: [ 🔯 香港故转, 🔯 日本故转, 🔯 狮城故转, 🔯 美国故转, ♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, 🌐 全部节点, 直连]}
   - {name: 🌐 全部节点, type: select, include-all: true, filter: "^((?!(直连|Traffic|Expire|剩余|重置|到期|延迟|过期)).)*$"}
 
   # 场景化路由策略
-  - {name: 🏢 Company, type: select, client-fingerprint: chrome, proxies: [ ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, 🔯 日本故转, 🔯 美国故转, 🚀 默认代理, 🌐 全部节点, 直连]}
-  - {name: 🍀 Google, type: select, client-fingerprint: chrome, proxies: [ ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, 🚀 默认代理, 🌐 全部节点, 直连]}
-  - {name: ✨ Openai, type: select, client-fingerprint: chrome, proxies: [ ♻️ 美国自动, 🇺🇲 美国节点, 🌐 全部节点]}
-  - {name: ✨ Cursor, type: select, client-fingerprint: chrome, proxies: [ ♻️ 美国自动, 🇺🇲 美国节点, 🌐 全部节点]}
-  - {name: ✨ Copilot, type: select, client-fingerprint: chrome, proxies: [ ♻️ 美国自动, 🇺🇲 美国节点, ♻️ 日本自动, ♻️ 狮城自动, 🌐 全部节点]}
+  - {name: 🏢 Company, type: select, client-fingerprint: chrome, proxies: [ 🔯 日本故转, 🔯 美国故转, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, 🚀 默认代理, 🌐 全部节点]}
+  - {name: 🍀 Google, type: select, client-fingerprint: chrome, proxies: [ 🔯 日本故转, 🔯 美国故转, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, 🚀 默认代理, 🌐 全部节点, 直连]}
+  - {name: ✨ Openai, type: select, client-fingerprint: chrome, proxies: [ 🔯 美国故转,♻️ 美国自动, 🇺🇲 美国节点, 🌐 全部节点]}
+  - {name: ✨ Cursor, type: select, client-fingerprint: chrome, proxies: [ 🔯 美国故转,♻️ 美国自动, 🇺🇲 美国节点, 🌐 全部节点]}
+  - {name: ✨ Copilot, type: select, client-fingerprint: chrome, proxies: [ 🔯 美国故转,♻️ 美国自动, 🇺🇲 美国节点, ♻️ 日本自动, ♻️ 狮城自动, 🌐 全部节点]}
   - {name: 🤖 AI, type: select, client-fingerprint: chrome, proxies: [ 🔯 美国故转, 🇺🇲 美国节点, 🌐 全部节点]}
   - {name: 🗽 US-Proxy, type: select, client-fingerprint: chrome, proxies: [ 🔯 美国故转, ♻️ 美国自动, 🇺🇲 美国节点, ♻️ 日本自动, ♻️ 狮城自动, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🌐 全部节点]}
-  - {name: 👨🏿‍💻 GitHub, type: select, proxies: [ ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, 🔯 香港故转, 🔯 日本故转, 🔯 新加坡故转, 🔯 美国故转, 🚀 默认代理, 🌐 全部节点, 直连]}
-  - {name: 📹 YouTube, type: select, proxies: [ ♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, 🚀 默认代理, 🌐 全部节点, 直连]}
-  - {name: 🐬 OneDrive, type: select, proxies: [ 直连, 🌐 全部节点, 🚀 默认代理]}
-  - {name: 🪟 Microsoft, type: select, proxies: [ 直连, 🌐 全部节点, 🚀 默认代理]}
+  - {name: 👨🏿‍💻 GitHub, type: select, proxies: [ 🔯 香港故转, 🔯 日本故转, 🔯 狮城故转, 🔯 美国故转, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, 🚀 默认代理, 🌐 全部节点, 直连]}
+  - {name: 📹 YouTube, type: select, proxies: [ 🔯 香港故转, 🔯 日本故转, 🔯 狮城故转, 🔯 美国故转,♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, 🚀 默认代理, 🌐 全部节点, 直连]}
   - {name: 🎵 TikTok, type: select, proxies: [ ♻️ 美国自动, ♻️ 狮城自动, 🌐 全部节点]}
   - {name: 📲 Telegram, type: select, proxies: [ 🚀 默认代理, ♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, 🌐 全部节点]}
   - {name: 🎥 NETFLIX, type: select, proxies: [ 🚀 默认代理, ♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, 🌐 全部节点]}
   - {name: 💶 PayPal, type: select, proxies: [ 🔯 美国故转, 🚀 默认代理, ♻️ 香港自动, ♻️ 美国自动, 🌐 全部节点]}
+  - {name: 🐬 OneDrive, type: select, proxies: [ 直连, 🌐 全部节点, 🚀 默认代理]}
+  - {name: 🪟 Microsoft, type: select, proxies: [ 直连, 🌐 全部节点, 🚀 默认代理]}
   - {name: 🐟 漏网之鱼, type: select, proxies: [ 直连, 🚀 默认代理, 🌐 全部节点]}
 
   # 地区故障转移
-  - {name: 🔯 日本故转, type: fallback, url: https://cp.cloudflare.com/generate_204, interval: 60, timeout: 3000, lazy: false, proxies: [♻️ 日本自动, 🇯🇵 日本节点]}
-  - {name: 🔯 新加坡故转, type: fallback, url: https://cp.cloudflare.com/generate_204, interval: 60, timeout: 3000, lazy: false, proxies: [♻️ 狮城自动, 🇸🇬 狮城节点]}
-  - {name: 🔯 香港故转, type: fallback, url: https://cp.cloudflare.com/generate_204, interval: 60, timeout: 3000, lazy: false, proxies: [♻️ 香港自动, 🇭🇰 香港节点]}
-  - {name: 🔯 美国故转, type: fallback, url: https://cp.cloudflare.com/generate_204, interval: 60, timeout: 3000, lazy: false, proxies: [♻️ 美国自动, 🇺🇲 美国节点]}
+  - {name: 🔯 日本故转, type: fallback, url: https://cp.cloudflare.com/generate_204, interval: 60, timeout: 3000, lazy: false, proxies: [ 🇯🇵 日本节点,♻️ 日本自动]}
+  - {name: 🔯 狮城故转, type: fallback, url: https://cp.cloudflare.com/generate_204, interval: 60, timeout: 3000, lazy: false, proxies: [ 🇸🇬 狮城节点, ♻️ 狮城自动]}
+  - {name: 🔯 香港故转, type: fallback, url: https://cp.cloudflare.com/generate_204, interval: 60, timeout: 3000, lazy: false, proxies: [ 🇭🇰 香港节点, ♻️ 香港自动]}
+  - {name: 🔯 美国故转, type: fallback, url: https://cp.cloudflare.com/generate_204, interval: 60, timeout: 3000, lazy: false, proxies: [ 🇺🇲 美国节点♻️ 美国自动]}
   
   # ==================== Url-Test 自动测速组（已补齐空格） ====================
   - {name: ♻️ 香港自动, type: url-test, url: https://cp.cloudflare.com/generate_204, client-fingerprint: chrome, interval: 60, timeout: 1000, max-failed-times: 2, tolerance: 50, include-all: true, filter: "(?i)^(?=.*(港|HK|Hong))(?!(.*(台|日|韩|新|美))).*$"}
@@ -189,7 +200,6 @@ rules:
   - RULE-SET,cursor, ✨ Cursor
   - RULE-SET,private_ip,直连
   - RULE-SET,private_domain,直连
-  - DOMAIN-SUFFIX,qichiyu.com,🚀 默认代理
   - RULE-SET,ai,🤖 AI
   - RULE-SET,github_domain,👨🏿‍💻 GitHub
   - RULE-SET,youtube_domain,📹 YouTube
