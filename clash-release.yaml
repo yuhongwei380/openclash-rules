@@ -145,6 +145,7 @@ proxy-groups:
   - {name: 🏢 Company, type: select, client-fingerprint: chrome, proxies: [ ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, 🔯 日本故转, 🔯 美国故转, 🚀 默认代理, 🌐 全部节点, 直连]}
   - {name: 🍀 Google, type: select, client-fingerprint: chrome, proxies: [ ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, 🚀 默认代理, 🌐 全部节点, 直连]}
   - {name: ✨ Openai, type: select, client-fingerprint: chrome, proxies: [ ♻️ 美国自动, 🇺🇲 美国节点, 🌐 全部节点]}
+  - {name: ✨ Cursor, type: select, client-fingerprint: chrome, proxies: [ ♻️ 美国自动, 🇺🇲 美国节点, 🌐 全部节点]}
   - {name: ✨ Copilot, type: select, client-fingerprint: chrome, proxies: [ ♻️ 美国自动, 🇺🇲 美国节点, ♻️ 日本自动, ♻️ 狮城自动, 🌐 全部节点]}
   - {name: 🤖 AI, type: select, client-fingerprint: chrome, proxies: [ 🔯 美国故转, 🇺🇲 美国节点, 🌐 全部节点]}
   - {name: 🗽 US-Proxy, type: select, client-fingerprint: chrome, proxies: [ 🔯 美国故转, ♻️ 美国自动, 🇺🇲 美国节点, ♻️ 日本自动, ♻️ 狮城自动, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🌐 全部节点]}
@@ -185,6 +186,7 @@ rules:
   - RULE-SET,proxy_inc, 🏢 Company
   - RULE-SET,copilot, ✨ Copilot
   - RULE-SET,openai, ✨ Openai
+  - RULE-SET,openai, ✨ Cursor
   - RULE-SET,private_ip,直连
   - RULE-SET,private_domain,直连
   - DOMAIN-SUFFIX,qichiyu.com,🚀 默认代理
@@ -222,6 +224,7 @@ rule-providers:
   direct_inc: { <<: *class, url: "https://raw.githubusercontent.com/yuhongwei380/openclash-rules/main/direct.list"}
   copilot: { <<: *class_yaml, url: "https://raw.githubusercontent.com/VPSDance/ai-proxy-rules/main/rules/clash/copilot.yaml"}
   openai: { <<: *class_yaml, url: "https://raw.githubusercontent.com/VPSDance/ai-proxy-rules/main/rules/clash/openai.yaml"}
+  cursor: { <<: *class_yaml, url: "https://raw.githubusercontent.com/VPSDance/ai-proxy-rules/main/rules/clash/cursor.yaml"}
   ai: {  <<: *domain, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/category-ai-!cn.mrs" }
   youtube_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/youtube.mrs"}
   google_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/google.mrs"}
