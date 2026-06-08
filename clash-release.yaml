@@ -186,7 +186,7 @@ rules:
   - RULE-SET,proxy_inc, 🏢 Company
   - RULE-SET,copilot, ✨ Copilot
   - RULE-SET,openai, ✨ Openai
-  - RULE-SET,openai, ✨ Cursor
+  - RULE-SET,cursor, ✨ Cursor
   - RULE-SET,private_ip,直连
   - RULE-SET,private_domain,直连
   - DOMAIN-SUFFIX,qichiyu.com,🚀 默认代理
