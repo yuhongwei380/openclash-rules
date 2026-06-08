@@ -171,10 +171,10 @@ proxy-groups:
   - {name: 🐟 漏网之鱼, type: select, proxies: [ 直连, 🚀 默认代理, 🌐 全部节点]}
 
   # 地区故障转移
-  - {name: 🔯 日本故转, type: fallback, url: https://cp.cloudflare.com/generate_204, interval: 60, timeout: 3000, lazy: false, proxies: [ 🇯🇵 日本节点,♻️ 日本自动]}
+  - {name: 🔯 日本故转, type: fallback, url: https://cp.cloudflare.com/generate_204, interval: 60, timeout: 3000, lazy: false, proxies: [ 🇯🇵 日本节点, ♻️ 日本自动]}
   - {name: 🔯 狮城故转, type: fallback, url: https://cp.cloudflare.com/generate_204, interval: 60, timeout: 3000, lazy: false, proxies: [ 🇸🇬 狮城节点, ♻️ 狮城自动]}
   - {name: 🔯 香港故转, type: fallback, url: https://cp.cloudflare.com/generate_204, interval: 60, timeout: 3000, lazy: false, proxies: [ 🇭🇰 香港节点, ♻️ 香港自动]}
-  - {name: 🔯 美国故转, type: fallback, url: https://cp.cloudflare.com/generate_204, interval: 60, timeout: 3000, lazy: false, proxies: [ 🇺🇲 美国节点♻️ 美国自动]}
+  - {name: 🔯 美国故转, type: fallback, url: https://cp.cloudflare.com/generate_204, interval: 60, timeout: 3000, lazy: false, proxies: [ 🇺🇲 美国节点, ♻️ 美国自动]}
   
   # ==================== Url-Test 自动测速组（已补齐空格） ====================
   - {name: ♻️ 香港自动, type: url-test, url: https://cp.cloudflare.com/generate_204, client-fingerprint: chrome, interval: 60, timeout: 1000, max-failed-times: 2, tolerance: 50, include-all: true, filter: "(?i)^(?=.*(港|HK|Hong))(?!(.*(台|日|韩|新|美))).*$"}
