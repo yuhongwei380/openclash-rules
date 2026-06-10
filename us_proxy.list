@@ -15,3 +15,12 @@ DOMAIN-SUFFIX,anthem.com
 DOMAIN-SUFFIX,meet.google.com
 DOMAIN-SUFFIX,icscompute.com
 DOMAIN-SUFFIX,confirmation.com
+
+DOMAIN-SUFFIX,chatgpt.com
+DOMAIN-SUFFIX,auth.openai.com
+DOMAIN-SUFFIX,openai.com
+DOMAIN-SUFFIX,challenges.cloudflare.com
+DOMAIN-SUFFIX,oaistatic.com 
+DOMAIN-SUFFIX,oaiusercontent.com
+DOMAIN-SUFFIX,intercomcdn.com
+DOMAIN-SUFFIX,statsig.com
