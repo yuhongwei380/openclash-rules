@@ -186,7 +186,7 @@ proxy-groups:
   - {name: 🇭🇰 香港节点, type: select, client-fingerprint: chrome, include-all: true, filter: "(?i)港|hk|hongkong|hong kong"}
   - {name: 🇯🇵 日本节点, type: select, client-fingerprint: chrome, include-all: true, filter: "(?i)日|jp|japan"}
   - {name: 🇸🇬 狮城节点, type: select, client-fingerprint: chrome, include-all: true, filter: "(?i)新加坡|坡|狮城|sg|SG|Singapore"}
-  - {name: 🇺🇲 美国节点, type: select, client-fingerprint: chrome, include-all: true, filter: "(?i)|us|unitedstates|united states"}
+  - {name: 🇺🇲 美国节点, type: select, client-fingerprint: chrome, include-all: true, filter: "(?i)US|us|unitedstates|united states"}
 
 
 # 规则匹配
