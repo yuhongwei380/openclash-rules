@@ -2,6 +2,7 @@
 
 
 #CUSTOM
+DOMAIN-SUFFIX,mirror.rackspace.com
 DOMAIN-SUFFIX,riken.jp
 DOMAIN-SUFFIX,connpass.com
 DOMAIN-SUFFIX,ubuntu.com
