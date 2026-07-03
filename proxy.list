@@ -2,6 +2,7 @@
 
 
 #CUSTOM
+DOMAIN-SUFFIX,neo4j.com
 DOMAIN-SUFFIX,mirror.freedif.org
 DOMAIN-SUFFIX,mirror.rackspace.com
 DOMAIN-SUFFIX,riken.jp
