@@ -2,6 +2,7 @@
 
 
 #CUSTOM
+DOMAIN-SUFFIX,dynamics.com
 DOMAIN-SUFFIX,nebula-graph.atlassian.net
 DOMAIN-SUFFIX,neo4j.com
 DOMAIN-SUFFIX,mirror.freedif.org
