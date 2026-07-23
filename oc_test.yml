@@ -58,7 +58,7 @@ geox-url:
 external-controller: 0.0.0.0:9090
 external-ui: "/usr/share/openclash/ui"
 external-ui-name: zashboard
-external-ui-url: "https://github.com/Zephyruso/zashboard/releases/download/v3.15.0/dist-misans-only.zip"
+#external-ui-url: "https://github.com/Zephyruso/zashboard/releases/download/v3.15.0/dist-misans-only.zip"
 secret: OpenClash
 
 # 嗅探
