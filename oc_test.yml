@@ -171,13 +171,11 @@ rules:
   - RULE-SET,openai,🤖 AI Services
   - RULE-SET,copilot,🤖 AI Services
   - RULE-SET,cursor,🤖 AI Services
-  - RULE-SET,ai,🤖 AI Services
-
+  - RULE-SET,ai-aio,🤖 AI Services
   - RULE-SET,private_ip,直连
   - RULE-SET,private_domain,直连
   - RULE-SET,github_domain,👨🏿‍💻 GitHub
   - RULE-SET,youtube_domain,📹 YouTube
-
   - RULE-SET,onedrive_domain,🐬 OneDrive
   - RULE-SET,microsoft_domain,🪟 Microsoft
   - RULE-SET,apple_domain,直连
@@ -208,15 +206,16 @@ rule-providers:
   direct_inc: { <<: *class, url: "https://raw.githubusercontent.com/yuhongwei380/openclash-rules/main/direct.list"}
   
   # AI 规则集
-  copilot: { <<: *class_yaml, url: "https://raw.githubusercontent.com/VPSDance/ai-proxy-rules/main/rules/clash/copilot.yaml"}
-  openai: { <<: *class_yaml, url: "https://raw.githubusercontent.com/VPSDance/ai-proxy-rules/main/rules/clash/openai.yaml"}
-  cursor: { <<: *class_yaml, url: "https://raw.githubusercontent.com/VPSDance/ai-proxy-rules/main/rules/clash/cursor.yaml"}
-  ai: { <<: *domain, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/category-ai-!cn.mrs" }
-  
-  # 常用服务规则集
-  youtube_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/youtube.mrs"}
+  copilot: { <<: *class_yaml, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/copilot.mrs"}
+  openai: { <<: *class_yaml, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/openai.mrs"}
+  cursor: { <<: *class_yaml, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/cursor.mrs"}
+  ai-aio: { <<: *domain, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/category-ai-!cn.mrs" }
+
+  #Google & Gemini 规则集
   google_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/google.mrs"}
   google_gemini_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/google-gemini.mrs"}
+  # 常用服务规则集
+  youtube_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/youtube.mrs"}
   github_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/github.mrs"}
   telegram_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/telegram.mrs"}
   netflix_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/netflix.mrs"}
