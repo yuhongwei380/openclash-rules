@@ -3,8 +3,6 @@
 
 #CUSTOM
 
-DST-PORT,3478,PROXY
-DST-PORT,19302,PROXY
 DOMAIN-SUFFIX,dynamics.com
 DOMAIN-SUFFIX,nebula-graph.atlassian.net
 DOMAIN-SUFFIX,neo4j.com
