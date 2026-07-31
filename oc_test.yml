@@ -162,7 +162,6 @@ proxy-groups:
 # 规则匹配
 rules:
   - RULE-SET,direct_inc,DIRECT
-  - RULE-SET,microsoft_domain,🪟 Microsoft
   - RULE-SET,us_proxy_inc,🗽 US-Proxy
   - RULE-SET,proxy_inc, 🏢 Company
   
@@ -179,6 +178,7 @@ rules:
   - RULE-SET,github_domain,👨🏿‍💻 GitHub
   - RULE-SET,youtube_domain,📹 YouTube
   - RULE-SET,onedrive_domain,🐬 OneDrive
+  - RULE-SET,microsoft_domain,🪟 Microsoft
   - RULE-SET,apple_domain,直连
   - RULE-SET,tiktok_domain,🎵 TikTok
   - RULE-SET,telegram_domain,📲 Telegram
