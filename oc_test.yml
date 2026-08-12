@@ -120,7 +120,18 @@ dns:
     geoip-code: CN
     ipcidr:
       - 240.0.0.0/4
-
+    domain:
+      - '+.google.com'
+      - '+.facebook.com'
+      - '+.youtube.com'
+      - "+.githubusercontent.com"
+      - "+.googlevideo.com"
+      - "+.msftconnecttest.com"
+      - "+.msftncsi.com"
+      - "+.linkedin.com"
+      - "+.anthem.com"
+      - "+.gusto.com"
+      - "+.confirmation.com"
 # 出站策略
 proxy-groups:
   # 核心策略组
