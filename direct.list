@@ -22,6 +22,7 @@ DST-PORT,5349,DIRECT
 
 
 #custom-domain
+DOMIAN-SUFFIX,alphaxiv.org
 DOMAIN-SUFFIX,packycode.com
 
 #kehu-domain
