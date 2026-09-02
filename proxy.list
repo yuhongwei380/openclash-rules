@@ -3,6 +3,7 @@
 
 #CUSTOM
 
+DOMAIN-SUFFIX,vllm.ai
 DOMAIN-SUFFIX,dynamics.com
 DOMAIN-SUFFIX,nebula-graph.atlassian.net
 DOMAIN-SUFFIX,neo4j.com
