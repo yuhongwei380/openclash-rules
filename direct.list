@@ -22,6 +22,7 @@ DST-PORT,5349,DIRECT
 
 
 #custom-domain
+DOMAIN-SUFFIX,epicgames.dev
 DOMAIN-SUFFIX,khivpn.nayapay.com
 DOMIAN-SUFFIX,alphaxiv.org
 DOMAIN-SUFFIX,packycode.com
