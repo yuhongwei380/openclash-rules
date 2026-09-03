@@ -138,7 +138,7 @@ proxy-groups:
   - {name: 🚀 默认代理, type: select, client-fingerprint: chrome, proxies: [ 🔯 香港故转, 🔯 日本故转, 🔯 狮城故转, 🔯 美国故转, ♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, 🌐 全部节点, 直连]}
   - {name: 🌐 全部节点, type: select, include-all: true, filter: "^((?!(直连|Traffic|Expire|剩余|重置|到期|延迟|过期)).)*$"}
   - {name: 🍀 Google & Gemini, type: select, client-fingerprint: chrome, proxies: [ 🔯 日本故转, 🔯 美国故转, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, 🚀 默认代理, 🌐 全部节点, 直连]}
-  - {name: 🤖 AI Services, type: select, client-fingerprint: chrome, proxies: [ 🔯 AI故转, 🔯 美国故转, ♻️ 美国自动, 🇺🇲 美国节点, ♻️ 日本自动, ♻️ 狮城自动, 🌐 全部节点]}
+  - {name: 🤖 AI Services, type: select, client-fingerprint: chrome, proxies: [ 🔯 美国故转AI, 🔯 美国故转, ♻️ 美国自动, 🇺🇲 美国节点, ♻️ 日本自动, ♻️ 狮城自动, 🌐 全部节点]}
   - {name: 🏢 Company, type: select, client-fingerprint: chrome, proxies: [ 🔯 日本故转, 🔯 美国故转, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, 🚀 默认代理, 🌐 全部节点]}
   - {name: 🗽 US-Proxy, type: select, client-fingerprint: chrome, proxies: [ 🔯 美国故转, ♻️ 美国自动, 🇺🇲 美国节点, ♻️ 日本自动, ♻️ 狮城自动, 🇯🇵 日本节点, 🇸🇬 狮城节点, 🌐 全部节点]}
   - {name: 👨🏿‍💻 GitHub, type: select, proxies: [ 🔯 香港故转, 🔯 日本故转, 🔯 狮城故转, 🔯 美国故转, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, 🚀 默认代理, 🌐 全部节点, 直连]}
@@ -156,20 +156,20 @@ proxy-groups:
   - {name: 🔯 狮城故转, type: fallback, url: http://cp.cloudflare.com/generate_204, interval: 60, timeout: 3000, lazy: false, proxies: [ 🇸🇬 狮城节点, ♻️ 狮城自动]}
   - {name: 🔯 香港故转, type: fallback, url: http://cp.cloudflare.com/generate_204, interval: 60, timeout: 3000, lazy: false, proxies: [ 🇭🇰 香港节点, ♻️ 香港自动]}
   - {name: 🔯 美国故转, type: fallback, url: http://cp.cloudflare.com/generate_204, interval: 60, timeout: 3000, lazy: false, proxies: [ 🇺🇲 美国节点, ♻️ 美国自动]}
-  - {name: 🔯 AI故转, type: fallback, url: http://cp.cloudflare.com/generate_204, interval: 60, timeout: 3000, lazy: false, proxies: [ 🇺🇲 AI美国节点, ♻️ AI美国自动, 🇺🇲 美国节点, ♻️ 美国自动]}
+  - {name: 🔯 美国故转AI, type: fallback, url: http://cp.cloudflare.com/generate_204, interval: 60, timeout: 3000, lazy: false, proxies: [ 🇺🇲 美国节点AI, ♻️ 美国自动AI, 🇺🇲 美国节点, ♻️ 美国自动]}
   
   # Url-Test 自动测速组
   - {name: ♻️ 香港自动, type: url-test, url: http://cp.cloudflare.com/generate_204, client-fingerprint: chrome, interval: 60, timeout: 3000, max-failed-times: 3, tolerance: 50, include-all: true, filter: "(?i)^(?=.*(港|HK|Hong))(?!(.*(台|日|韩|新|美))).*$"}
   - {name: ♻️ 日本自动, type: url-test, url: http://cp.cloudflare.com/generate_204, client-fingerprint: chrome, interval: 60, timeout: 3000, max-failed-times: 3, tolerance: 50, include-all: true, filter: "(?=.*(日|JP|(?i)Japan|c22s4))^((?!(us|港|台|韩|新|美)).)*$"}
   - {name: ♻️ 狮城自动, type: url-test, url: http://cp.cloudflare.com/generate_204, client-fingerprint: chrome, interval: 60, timeout: 3000, max-failed-times: 3, tolerance: 50, include-all: true, filter: "(?=.*(新加坡|坡|狮城|SG|Singapore))^((?!(港|台|韩|日|美)).)*$"}
   - {name: ♻️ 美国自动, type: url-test, url: http://cp.cloudflare.com/generate_204, client-fingerprint: chrome, interval: 60, timeout: 3000, max-failed-times: 3, tolerance: 50, include-all: true, filter: "(?=.*(US|us|(?i)States|America))^((?!(港|台|日|韩|新)).)*$"}
-  - {name: ♻️ AI美国自动, type: url-test, url: http://cp.cloudflare.com/generate_204, client-fingerprint: chrome, interval: 60, timeout: 3000, max-failed-times: 3, tolerance: 50, include-all: true, filter: "(?=.*(US|us|(?i)States|America))^((?!(港|台|日|韩|新)).)*$"}
+  - {name: ♻️ 美国自动AI, type: url-test, url: http://cp.cloudflare.com/generate_204, client-fingerprint: chrome, interval: 60, timeout: 3000, max-failed-times: 3, tolerance: 50, include-all: true, filter: "(?=.*(US|us|(?i)States|America))^((?!(港|台|日|韩|新)).)*$"}
   
   # 手动选择组
   - {name: 🇭🇰 香港节点, type: select, client-fingerprint: chrome, include-all: true, filter: "(?i)港|hk|hongkong|hong kong"}
   - {name: 🇯🇵 日本节点, type: select, client-fingerprint: chrome, include-all: true, filter: "(?=.*(日|JP|(?i)Japan|c22s4))^((?!(us|港|台|韩|新|美)).)*$"}
   - {name: 🇸🇬 狮城节点, type: select, client-fingerprint: chrome, include-all: true, filter: "(?i)新加坡|坡|狮城|sg|SG|Singapore"}
-  - {name: 🇺🇲 AI美国节点, type: select, client-fingerprint: chrome, include-all: true, filter: "(?i)US|us|unitedstates|united states|us-vps|c22s1|c22s2|c22s3|c22s801"}
+  - {name: 🇺🇲 美国节点AI, type: select, client-fingerprint: chrome, include-all: true, filter: "(?i)US|us|unitedstates|united states|us-vps|c22s1|c22s2|c22s3|c22s801"}
   - {name: 🇺🇲 美国节点, type: select, client-fingerprint: chrome, include-all: true, filter: "(?i)US|us|unitedstates|united states|us-vps|c22s1|c22s2|c22s3|c22s801"}
   - {name: NL 荷兰节点, type: select, client-fingerprint: chrome, include-all: true, filter: "(?i)c22s5"}
 
