@@ -2,7 +2,7 @@
 
 
 #CUSTOM
-
+DOMAIN-SUFFIX,persistent.oaistatic.com
 DOMAIN-SUFFIX,vllm.ai
 DOMAIN-SUFFIX,dynamics.com
 DOMAIN-SUFFIX,nebula-graph.atlassian.net
