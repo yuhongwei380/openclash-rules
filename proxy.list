@@ -3,6 +3,7 @@
 
 #CUSTOM
 DOMAIN-SUFFIX,dedirock.com
+DOMAIN-SUFFIX,ab.chatgpt.com
 DOMAIN-SUFFIX,persistent.oaistatic.com
 DOMAIN-SUFFIX,vllm.ai
 DOMAIN-SUFFIX,dynamics.com
