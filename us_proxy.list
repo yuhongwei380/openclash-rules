@@ -28,6 +28,7 @@ DOMAIN-SUFFIX,icscompute.com
 DOMAIN-SUFFIX,confirmation.com
 
 #us-apple-login-domain
+DOMAIN-SUFFIX,appleid.apple.com
 DOMAIN-SUFFIX,idmsa.apple.com
 DOMAIN-SUFFIX,gsa.apple.com
 DOMAIN-SUFFIX,idms-apple.com.akadns.net
