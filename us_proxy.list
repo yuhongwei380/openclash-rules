@@ -1,6 +1,7 @@
 # 强制US-代理列表
 
 
+
 #CUSTOM
 DOMAIN-SUFFIX,cupertino.gov
 DOMAIN-SUFFIX,giftly.com
@@ -25,3 +26,13 @@ DOMAIN-SUFFIX,anthem.com
 DOMAIN-SUFFIX,meet.google.com
 DOMAIN-SUFFIX,icscompute.com
 DOMAIN-SUFFIX,confirmation.com
+
+#us-apple-login-domain
+DOMAIN-SUFFIX,idmsa.apple.com
+DOMAIN-SUFFIX,gsa.apple.com
+DOMAIN-SUFFIX,idms-apple.com.akadns.net
+DOMAIN-SUFFIX,mask.icloud.com
+DOMAIN-SUFFIX,mask-h2.icloud.com
+DOMAIN-SUFFIX,mask-api.icloud.com
+DOMAIN-SUFFIX,apple-dns.net
+DOMAIN-SUFFIX,apple-dns.cn
