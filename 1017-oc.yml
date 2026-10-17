@@ -211,7 +211,7 @@ rules:
   - RULE-SET,netflix_ip,🎥 YouTube&NETFLIX,no-resolve
   - RULE-SET,telegram_ip,📲 Telegram,no-resolve
   - RULE-SET,geolocation-!cn,🚀 默认代理
-  - RULE-SET,tiktok_domain,,REJECT
+  - RULE-SET,tiktok_domain,REJECT
   - RULE-SET,advertising,REJECT
   - RULE-SET,privacy,REJECT
   - RULE-SET,steam_domain,直连
