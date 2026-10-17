@@ -219,9 +219,9 @@ rule-anchor:
 
 rule-providers: 
   private_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/private.mrs"}
-  us_proxy_inc: { <<: *class, url: "https://raw.githubusercontent.com/yuhongwei380/openclash-rules/main/us_proxy.list"}
-  proxy_inc: { <<: *class, url: "https://raw.githubusercontent.com/yuhongwei380/openclash-rules/main/proxy.list"}
-  direct_inc: { <<: *class, url: "https://raw.githubusercontent.com/yuhongwei380/openclash-rules/main/direct.list"}
+  us_proxy_inc: { <<: *class, url: "https://raw.githubusercontent.com/yuhongwei380/oc-rules/main/us_proxy.list"}
+  proxy_inc: { <<: *class, url: "https://raw.githubusercontent.com/yuhongwei380/oc-rules/main/proxy.list"}
+  direct_inc: { <<: *class, url: "https://raw.githubusercontent.com/yuhongwei380/oc-rules/main/direct.list"}
   
   # AI 规则集
   copilot: { <<: *class_yaml, url: "https://github.com/MetaCubeX/meta-rules-dat/raw/refs/heads/meta/geo/geosite/copilot.mrs"}
