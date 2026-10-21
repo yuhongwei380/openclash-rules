@@ -30,6 +30,7 @@ DOMAIN-SUFFIX,icscompute.com
 DOMAIN-SUFFIX,confirmation.com
 
 #us-apple-login-domain
+DOMAIN-SUFFIX,account.apple.com
 DOMAIN-SUFFIX,appleid.apple.com
 DOMAIN-SUFFIX,idmsa.apple.com
 DOMAIN-SUFFIX,gsa.apple.com
